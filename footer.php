@@ -6,8 +6,6 @@
   </ul>
 
   <?php if (isset($displayJSPopup) && $displayJSPopup) { ?>
-    <div id="footer-popup">
-      <span id="footer-popup-text">Diese Webseite verwendet kein JavaScript.</span>
-    </div>
+    <div id="footer-popup">Diese Webseite verwendet kein JavaScript.</div>
   <?php } ?>
 </footer>

@@ -5,7 +5,7 @@
   <?php include __DIR__ . '/../header.php' ?>
 
   <main id="content">
-    <h1 class="heading"><?= animatedChars('Impressum') ?></h1>
+    <h1><?= animatedChars('Impressum') ?></h1>
     <h2>Angaben gemäß §5 TMG</h2>
     <p>Ludwig Lehnert<br>Glockenstraße 38<br>95447 Bayreuth</p>
 

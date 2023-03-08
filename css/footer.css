@@ -24,17 +24,17 @@
   z-index: 3;
 }
 
-@keyframes swipe-down {
+@keyframes fade-out {
   0% {
-    translate: 0 0;
+    opacity: 1;
   }
 
   80% {
-    translate: 0 0;
+    opacity: 1;
   }
 
   100% {
-    translate: 0 100%;
+    opacity: 0;
   }
 }
 
@@ -43,29 +43,13 @@
   z-index: 2;
 
   left: 0;
-  bottom: 0;
+  right: 0;
+  bottom: calc(100% + 15px);
 
   width: 100vw;
-  height: calc(100% + 35px);
-
-  border-top: 1px solid white;
-  background-color: var(--popup-color);
-
-  translate: 0 100%;
-
-  animation: 3s swipe-down ease-in;
-}
-
-#footer-popup-text {
-  position: absolute;
-  width: 100%;
   text-align: center;
+  color: white;
 
-  padding: 12px 0 12px 0;
-
-  border-bottom: 1px solid white;
-}
-
-#copyright-notice {
-  font-size: 10pt;
+  opacity: 0;
+  animation: 10s fade-out;
 }
