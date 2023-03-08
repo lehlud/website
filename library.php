@@ -31,7 +31,7 @@ function createBackgroundAnimation()
 {
   $dom = new DOMDocument('1.0', 'utf-8');
 
-  $objectCount = 450;
+  $objectCount = 250;
 
   $animationDiv = $dom->createElement('div');
   $animationDiv->setAttribute('id', 'animation');
