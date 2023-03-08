@@ -1,0 +1,4 @@
+#content {
+  padding-top: max(120px, 15vh);
+  bottom: unset !important;
+}

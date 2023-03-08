@@ -14,17 +14,16 @@
 
   top: 0;
   right: 0;
-  bottom: 0;
+  bottom: 10vh;
   left: 0;
 
-  width: min(80%, 600px);
-  height: 100px;
+  width: min(85%, 600px);
+
   margin: auto;
-  padding-bottom: 20vh;
 
   animation: 2s fade-in;
 }
 
 #content {
-  font-size: min(max(2vw, 2vh, 20pt), 300%);
+  font-size: min(max(1.6vw, 1.6vh, 14pt), 300%);
 }

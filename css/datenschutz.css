@@ -1,0 +1,11 @@
+#content {
+  margin-top: max(120px, 10vh);
+  bottom: unset !important;
+
+  width: min(90%, 1000px);
+
+  max-height: calc(100% - 200px);
+  overflow: auto;
+
+  font-size: unset;
+}

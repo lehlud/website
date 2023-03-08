@@ -17,6 +17,11 @@
   padding: 20px;
 }
 
+#datenschutz-link,
+#impressum-link {
+  z-index: 3;
+}
+
 @keyframes swipe-down {
   0% {
     translate: 0 0;
@@ -33,19 +38,28 @@
 
 #footer-popup {
   position: absolute;
-  top: 0;
+  z-index: 2;
+
   left: 0;
+  bottom: 0;
 
   width: 100vw;
-  height: 100%;
+  height: calc(100% + 35px);
 
+  border-top: 1px solid white;
   background-color: var(--popup-color);
-
-  display: grid;
-  place-items: center;
-
 
   translate: 0 100%;
 
   animation: 3s swipe-down ease-in;
+}
+
+#footer-popup-text {
+  position: absolute;
+  width: 100%;
+  text-align: center;
+
+  padding: 12px 0 12px 0;
+
+  border-bottom: 1px solid white;
 }

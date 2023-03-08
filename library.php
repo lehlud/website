@@ -10,7 +10,7 @@ function animatedChars(string $text)
 {
   $dom = new DOMDocument('1.0', 'utf-8');
 
-  foreach (str_split($text) as $c) {
+  foreach (preg_split('//u', $text, -1, PREG_SPLIT_NO_EMPTY) as $c) {
     $span = $dom->createElement('span', $c);
     $span->setAttribute('class', 'animated-char');
 
