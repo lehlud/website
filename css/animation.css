@@ -92,3 +92,23 @@
   --border-width: calc(5px + var(--error-factor) * 4px);
   border: var(--border-width) solid var(--color);
 }
+
+/* animated text */
+.animated-char {
+  color: transparent;
+}
+
+.animated-char::before {
+  position: absolute;
+  color: var(--font-color);
+  content: var(--c);
+
+  transition-duration: 200ms;
+}
+
+.animated-char:hover::before {
+  rotate: calc(15deg * var(--right));
+  translate: 0 calc(20% * var(--up));
+
+  color: var(--color);
+}

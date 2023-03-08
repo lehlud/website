@@ -4,8 +4,10 @@
   margin: 0;
   box-sizing: border-box;
 
-  color: white;
+  color: var(--font-color);
   font-family: "Merriweather Sans", "Ubuntu", "Arial";
+
+  user-select: none;
 }
 
 body,

@@ -4,6 +4,8 @@
 
   --overlay-color: rgba(var(--background-color-rgb), 0.8);
 
+  --font-color: white;
+
   --color-anchor: #8b8bff;
   --color-anchor-focus: #ababff;
 }

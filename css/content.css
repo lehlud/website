@@ -17,7 +17,7 @@
   bottom: 0;
   left: 0;
 
-  width: min(60%, 600px);
+  width: min(80%, 600px);
   height: 100px;
   margin: auto;
   padding-bottom: 20vh;
@@ -25,6 +25,6 @@
   animation: 2s fade-in;
 }
 
-#content>* {
-  font-size: 200%;
+#content {
+  font-size: min(max(2vw, 2vh, 20pt), 300%);
 }
