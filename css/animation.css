@@ -1,0 +1,94 @@
+@keyframes spin {
+  0% {
+    rotate: 0deg;
+  }
+
+  100% {
+    rotate: calc(360deg * var(--sign));
+  }
+}
+
+@keyframes scale-up {
+  0% {
+    scale: 0;
+  }
+
+  100% {
+    scale: 1;
+  }
+}
+
+@keyframes extra-spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(calc(360deg * var(--sign)));
+  }
+}
+
+
+@keyframes move-outwards {
+  0% {
+    margin-top: 0;
+    margin-left: 0;
+  }
+
+  100% {
+    margin-top: var(--offset-y);
+    margin-left: var(--offset-x);
+  }
+}
+
+#animation {
+  z-index: 0;
+  position: fixed;
+
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+
+  margin: auto;
+
+  max-width: 0;
+  max-height: 0;
+}
+
+#animation>* {
+  position: absolute;
+
+  background-color: var(--color);
+
+  --error-factor: calc(var(--error) / 4);
+  --error-time: calc(1s * var(--error) / 6);
+
+  width: calc(50px * var(--error-factor) / 2);
+  height: calc(50px * var(--error-factor) / 2);
+
+  --offset-length: calc(var(--error-factor) * max(23vw, 23vh));
+  --offset-x: calc(var(--offset-length) * var(--offset-cos));
+  --offset-y: calc(var(--offset-length) * var(--offset-sin));
+
+  margin-top: var(--offset-y);
+  margin-left: var(--offset-x);
+
+  animation: scale-up calc(var(--error-time) / 3),
+    move-outwards var(--error-time) cubic-bezier(0.2, 0.8, 0.55, 1.0),
+    spin calc(2 * var(--error-time) / 3) ease-out,
+    /* extra animation for permanent spin */
+    extra-spin calc(12s + 2 * var(--error-time) / 3) infinite linear;
+}
+
+#animation>.circle {
+  border-radius: 99999px;
+}
+
+#animation>.donut {
+  border-radius: 99999px;
+  background-color: unset;
+
+  --border-width: calc(5px + var(--error-factor) * 4px);
+  border: var(--border-width) solid var(--color);
+}

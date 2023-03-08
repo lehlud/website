@@ -1,0 +1,13 @@
+@font-face {
+  font-family: 'Merriweather Sans';
+  font-style: normal;
+  font-display: swap;
+  src: url('./merriwather-sans/MerriweatherSans-VariableFont_wght.ttf');
+}
+
+@font-face {
+  font-family: 'Merriweather Sans';
+  font-style: italic;
+  font-display: swap;
+  src: url('./merriwather-sans/MerriweatherSans-Italic-VariableFont_wght.ttf');
+}

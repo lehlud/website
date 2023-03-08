@@ -1,0 +1,19 @@
+#footer {
+  position: fixed;
+  z-index: 2;
+
+  bottom: 0;
+  width: 100%;
+
+  border-top: 1px solid white;
+  background-color: var(--overlay-color);
+
+  padding: 20px;
+}
+
+#footer #footer-links {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+  padding: 0;
+}
